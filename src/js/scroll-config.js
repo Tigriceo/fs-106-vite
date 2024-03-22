@@ -2,7 +2,7 @@ console.log('test');
 
 (() => {
     const refs = {
-        openModalBtn: document.querySelector("[data-menu-open]"),
+        openModalBtn: document.querySelector("[data-menu-open]"), // .modal-open
         closeModalBtn: document.querySelector("[data-menu-close]"),
         mobilemenu: document.querySelector("[data-menu]"),
     };
@@ -14,6 +14,7 @@ console.log('test');
     function toggleModal() {
         refs.mobilemenu.classList.toggle("is-open");
     }
+
     /**
      * Scroll to section
      */
@@ -57,4 +58,20 @@ console.log('test');
         }
     }
     scrollToSection();
+
+    /**
+     * prevent Click
+     */
+    function preventClick() {
+        let links = document.querySelectorAll('.test-link');
+        console.log(links);
+        for (let i = 0; i < links.length; i++) {
+            const link = links[i];
+            link.addEventListener('click', (e) => {
+                console.log(e);
+                e.preventDefault()
+            })
+        }
+    }
+    preventClick()
 })();
