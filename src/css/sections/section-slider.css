@@ -1,0 +1,25 @@
+.benefits-slide {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+  background: wheat;
+}
+
+.benefits-slide.swiper-slide-active .benefits-slide__text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.benefits-slide__text {
+  transition: ease-in-out 0.4s 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+
+.benefits-slider .swiper-slide{
+    
+}
